@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hack The World</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url(./OIP.jpeg);
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header */
+        #header {
+            height: 150px;
+            width: 100%;
+            background-color: rgb(18, 17, 17);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        #header h1 {
+            color: aliceblue;
+            font-size: 50px;
+        }
+
+        #logo img {
+            height: 140px;
+            max-width: 100%;
+            transition: all 4s ease-in-out;
+            
+
+        }
+        #logo img:hover{
+            transform: translate(-870px) rotate(360deg) scale(1.5);
+        }
+
+        /* Navigation Bar */
+        #nav {
+            height: 60px;
+            width: 100%;
+            background-color: gray;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .navigator {
+            padding: 10px 20px;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            background-color: gray;
+            border-radius: 10px;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .navigator a {
+            text-decoration: none;
+            color: inherit; /* Keeps the same color as parent */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .navigator:hover {
+            background-color: rgb(112, 102, 102);
+            transform: scale(1.1);
+        }
+
+        /* Main Content */
+        #main {
+            height: auto;
+            width: 100%;
+            background-color: rgb(75, 74, 74);
+            color: aliceblue;
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            border-radius: 10px;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+
+        .objects {
+            height: 400px;
+            width: 300px;
+            background-color: rgb(59, 59, 59);
+            border-radius: 20px;
+            padding: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .objects:hover {
+            transform: scale(1.1);
+        }
+
+        /* Form Styling */
+        form {
+            width: 100%;
+            max-width: 600px;
+            background-color: rgb(59, 59, 59);
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        form input[type="text"], form input[type="email"], form button {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 10px;
+            border: 1px solid rgb(75, 74, 74);
+            background-color: rgb(112, 102, 102);
+            color: white;
+        }
+
+        form button {
+            cursor: pointer;
+        }
+
+        form input[type="text"], form input[type="email"] {
+            background-color: rgb(112, 102, 102);
+            color: white;
+        }
+
+        form input[type="text"]:focus, form input[type="email"]:focus, form button:hover {
+            background-color: rgb(112, 92, 92);
+        }
+
+        /* Footer */
+        #footer {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            padding: 20px;
+        }
+
+        .details {
+            height: 300px;
+            width: 300px;
+            background-color: rgb(18, 17, 17);
+            border-radius: 20px;
+            color: aliceblue;
+            padding: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            #header {
+                flex-direction: column;
+                text-align: center;
+                height: auto;
+                padding: 10px;
+            }
+
+            #nav {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .navigator {
+                width: 100%;
+                margin: 5px 0;
+            }
+
+            #main, #footer {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .objects, .details {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>Hack The World</h1>
+        <div id="logo">
+            <img src="./IMG_4713.PNG" alt="Logo">
+        </div>
+    </div>
+
+    <div id="nav">
+        <div class="navigator"><a href="./improvedhactheworld.html">HOME</a></div>
+        <div class="navigator"><a href="./myproject.html">MY PROJECT</a></div>
+        <div class="navigator"><a href="#">PAGES</a></div>
+        <div class="navigator"><a href="./joinme.html">JOIN ME</a></div>
+        <div class="navigator"><a href="#">CONTACT ME</a></div>
+    </div>
+
+    <div id="main">
+        <form id="form" action="">
+            <strong>Enter Your Name: <input type="text"></strong><br><br>
+            <strong>Enter Your Email: <input type="email"></strong><br><br>
+            <strong><button>Submit</button></strong>
+        </form>
+    </div>
+
+    <div id="footer">
+        <div class="details"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p></div>
+        <div class="details"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p></div>
+        <div class="details"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p></div>
+    </div>
+</body>
+</html>

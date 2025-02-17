@@ -1,0 +1,185 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url(./OIP.jpeg);
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header */
+        #header {
+            height: 150px;
+            width: 100%;
+            background-color: rgb(18, 17, 17);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            text-decoration: none;
+            text-decoration-line: none;
+            
+        }
+
+        #header h1 {
+            color: aliceblue;
+            font-size: 50px;
+            text-decoration: none;
+            text-decoration-line: none;
+        }
+
+        #logo img {
+            height: 140px;
+            max-width: 100%;
+            transition: all 4s ease-in-out;
+            
+
+        }
+        #logo img:hover{
+            transform: translate(-870px) rotate(360deg) scale(1.5);
+        }
+         
+
+        /* Navigation Bar */
+        #nav {
+            height: 60px;
+            width: 100%;
+            background-color: gray;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .navigator {
+            padding: 10px 20px;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            background-color: gray;
+            border-radius: 10px;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .navigator a {
+            text-decoration: none;
+            color: inherit; /* Keeps the same color as parent */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .navigator:hover {
+            background-color: rgb(112, 102, 102);
+            transform: scale(1.1);
+            position: relative;
+        }
+        /* .navigator:active{
+            transform: translate(10px,-100px) rotate(360deg) scale(1.5);
+            position: relative;
+        }        
+         */
+
+        /* Main Content */
+        #main {
+            height: 450px;
+            width: 100%;
+            background-color: rgb(75, 74, 74);
+            color: aliceblue;
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            border-radius: 10px;
+            padding: 20px;
+            flex-wrap: wrap;
+            overflow: auto;
+            scrollbar-color:rgb(75, 74, 74); 
+            scroll-behavior: smooth;
+            scrollbar-base-color: brown;
+        }
+
+        .objects {
+            height: 400px;
+            width: 300px;
+            background-color: rgb(59, 59, 59);
+            border-radius: 20px;
+            padding: 20px;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .objects:hover {
+            transform: scale(1.1);
+        }
+
+        /* Footer */
+        #footer {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            padding: 20px;
+        }
+
+        .details {
+            height: 300px;
+            width: 300px;
+            background-color: rgb(18, 17, 17);
+            border-radius: 20px;
+            color: aliceblue;
+            padding: 20px;
+        }
+
+        /* Responsive Design Take From GPT */
+        @media (max-width: 768px) {
+            #header {
+                flex-direction: column;
+                text-align: center;
+                height: auto;
+                padding: 10px;
+
+
+
+
+
+
+
+
+            }
+
+            #nav {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .navigator {
+                width: 100%;
+                margin: 5px 0;
+            }
+
+            #main, #footer {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .objects, .details {
+                width: 90%;
+            }
+        }
+    
